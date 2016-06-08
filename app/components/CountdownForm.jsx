@@ -1,6 +1,9 @@
 var React = require('react');
 
 var CountdownForm = React.createClass({
+  propTypes: {
+    onSetCountdown: React.PropTypes.func.isRequired
+  },
   onFormSubmit: function (e) {
     e.preventDefault();
 
