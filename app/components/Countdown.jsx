@@ -8,7 +8,7 @@ var Countdown = React.createClass({
     return {
       count: 0,
       countdownStatus: 'stopped'
-    }
+    };
   },
   componentDidUpdate: function (prevProps, prevState) {
     if (this.state.countdownStatus !== prevState.countdownStatus) {
@@ -17,7 +17,7 @@ var Countdown = React.createClass({
           this.startTimer();
           break;
         case 'stopped':
-          this.setState({ count: 0 })
+          this.setState({ count: 0 });
         case 'paused':
           clearInterval(this.timer);
           this.timer = undefined;
@@ -52,7 +52,7 @@ var Countdown = React.createClass({
   handleStatusChange: function (status) {
     this.setState({
       countdownStatus: status
-    })
+    });
   },
   render: function () {
     var { count, countdownStatus } = this.state;
